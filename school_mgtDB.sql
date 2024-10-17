@@ -3,12 +3,14 @@ DROP DATABASE IF EXISTS school_mgtDB;
 CREATE DATABASE school_mgtDB;
 USE school_mgtDB;
 
--- Create the relevant tables
+-- Create the Relevant Tables
 DROP TABLE IF EXISTS departments;
 CREATE TABLE departments (
     department_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     department_name VARCHAR(150)
 );
+-- Insert departments data
+INSERT INTO 
 
 DROP TABLE IF EXISTS students;
 CREATE TABLE students (
@@ -44,3 +46,5 @@ CREATE TABLE courses (
     FOREIGN KEY (department_id)
         REFERENCES departments(department_id)
 );
+
+
