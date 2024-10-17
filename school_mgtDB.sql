@@ -10,7 +10,11 @@ CREATE TABLE departments (
     department_name VARCHAR(150)
 );
 -- Insert departments data
-INSERT INTO departments(department_name) VALUES('Microbiology');
+INSERT INTO departments (department_name) 
+VALUES('Statistics'), 
+('Mathematics'),
+('Computer Science'),
+('Economics');
  
 
 DROP TABLE IF EXISTS students;
