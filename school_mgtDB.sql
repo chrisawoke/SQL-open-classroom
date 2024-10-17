@@ -33,5 +33,13 @@ CREATE TABLE departments (
     department_name VARCHAR(150)
 );
 
+CREATE TABLE courses (
+    course_id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(100),
+    department_id INT,
+    credits INT,
+    FOREIGN KEY (department_id)
+        REFERENCES departments (department_id)
+);
 
 
