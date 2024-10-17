@@ -30,7 +30,7 @@ CREATE TABLE teachers (
     hire_date DATE NOT NULL,
     terminate_date DATE,
     department_id INT,
-    salary DECIMAL(10, 2) CHECK (salary >= 0),
+    salary DECIMAL(10, 2),
     FOREIGN KEY (department_id)
         REFERENCES departments(department_id)
 );
