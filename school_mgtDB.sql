@@ -73,4 +73,13 @@ CREATE TABLE grades (
     grade_date DATE
 );
 
-
+CREATE TABLE attendance (
+    attendance INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    FOREIGN KEY (student_id)
+        REFERENCES students (student_id),
+    class_id INT,
+    FOREIGN KEY (class_id)
+        REFERENCES classes (class_id),
+    status ENUM('Present', 'Absent')
+);
