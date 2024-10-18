@@ -53,5 +53,24 @@ CREATE TABLE classes (
     classroom VARCHAR(100)
 );
 
+CREATE TABLE enrollment (
+    enrollment_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    FOREIGN KEY (student_id)
+        REFERENCES students (student_id),
+    class_id INT,
+    FOREIGN KEY (class_id)
+        REFERENCES classes (class_id),
+    enrollment_date DATE
+);
+
+CREATE TABLE grades (
+    grade_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    FOREIGN KEY (student_id)
+        REFERENCES students (student_id),
+    grade CHAR(5),
+    grade_date DATE
+);
 
 
