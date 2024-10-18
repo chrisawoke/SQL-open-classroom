@@ -8,13 +8,6 @@ CREATE TABLE departments (
     department_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     department_name VARCHAR(150)
 );
-
--- Insert departments data
-INSERT INTO departments (department_name) 
-VALUES('Statistics'), 
-('Mathematics'),
-('Computer Science'),
-('Economics');
  
 CREATE TABLE students (
     student_id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -59,4 +52,6 @@ CREATE TABLE classes (
     class_time TIME,
     classroom VARCHAR(100)
 );
+
+
 
