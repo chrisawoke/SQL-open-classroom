@@ -38,6 +38,7 @@ CREATE TABLE teachers (
     terminate_date DATE,
     department_id INT,
     salary DECIMAL(10, 2),
+    department_id INT,
     FOREIGN KEY (department_id)
         REFERENCES departments(department_id)
 );
@@ -48,6 +49,7 @@ CREATE TABLE courses (
     course_name VARCHAR(100),
     department_id INT,
     credits INT,
+    department_id INT,
     FOREIGN KEY (department_id)
         REFERENCES departments(department_id)
 );
