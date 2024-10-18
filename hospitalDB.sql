@@ -58,4 +58,12 @@ CREATE TABLE appointments (
     status ENUM('Present', 'Absent', 'Unavailable') DEFAULT 'Unavailable'
 );
 
+CREATE TABLE studentdr (
+    studentdr_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(30),
+    last_name VARCHAR(35),
+    gender CHAR(25),
+    age INT,
+    departments VARCHAR(150)
+);
       		
