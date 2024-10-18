@@ -27,7 +27,6 @@ CREATE TABLE students (
     grade_level INT
 );
 
-DROP TABLE IF EXISTS teachers;
 CREATE TABLE teachers (
     teacher_id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(35) NOT NULL,
@@ -49,4 +48,15 @@ CREATE TABLE courses (
         REFERENCES departments(department_id)
 );
 
+CREATE TABLE classes (
+    class_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    course_id INT,
+    FOREIGN KEY (course_id)
+        REFERENCES courses (course_id),
+    teacher_id INT,
+    FOREIGN KEY (teacher_id)
+        REFERENCES teachers (teacher_id),
+    class_time TIME,
+    classroom VARCHAR(100)
+);
 
