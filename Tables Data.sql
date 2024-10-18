@@ -9,7 +9,7 @@ VALUES('Statistics'), ('Mathematics'), ('Computer Science'),
 
 -- Student Data
 INSERT INTO students (first_name, last_name)
-VALUES ();
+VALUES ('Jerry', 'Okland');
 -- Teacher Data
 
 -- Courses Data
