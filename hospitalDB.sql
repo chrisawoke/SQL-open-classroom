@@ -66,4 +66,7 @@ CREATE TABLE studentdr (
     age INT,
     departments VARCHAR(150)
 );
-      		
+
+INSERT INTO studentdr(studentdr_id,first_name,last_name,gender,unit,student_level,feedback)
+VALUES(null, 'Dave', 'John','Male','Radiology','400L',"I'm enjoying my hospital learning"),
+(null, 'Kelvin', 'Michael', 'Male', 'Surgery', '500L', 'I love every session of the training');
